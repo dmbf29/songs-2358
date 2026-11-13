@@ -1,0 +1,12 @@
+<%# @song #=> <#Song: id: 18, title: "Hey jude", year: 1968, category: "rock"> %>
+<div class="container">
+  <h1>Add a Song</h1>
+  <%= simple_form_for @song do |f| %>
+    <%= f.input :title %>
+    <%= f.submit 'Add' %>
+  <% end %>
+</div>
+<form action="/songs/18" method="patch">
+  <input type="text" name="song[title]" value="Hey jude"/>
+  <input type="submit" value="Update song"/>
+</form>
